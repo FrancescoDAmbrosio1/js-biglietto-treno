@@ -7,9 +7,9 @@
 // BONUS
 // provate a stampare il prezzo anche nella pagina html dentro ad un tag p
 
-//CHIEDERE all'utente quanti chilometri deve fare
+
 const distanza = parseInt(prompt('Quanti chilometri vuole percorrere il passeggero?')); //number
-//CHIEDERE all'utente quanti anni ha
+
 const eta = parseInt(prompt('Indicare età del passeggero')); //number
 const moltiplicatoreCosto = 0.21; //number
 let costoBiglietto = distanza * moltiplicatoreCosto;
@@ -22,8 +22,3 @@ if (eta < 18){
 } else{
     console.log('Il costo del biglietto è di:', costoBiglietto.toFixed(2), '€');
 }
-
-//SE eta < 18 anni applicare sconto 20%
-//ALTRIMENTI SE  eta > 65 applicare sconto 40%
-//ALTRIMENTI applicare prezzo intero
-//STAMPARE costo biglietto arrotondato a due cifre (senza però arrontonare il valore di calcolo)
