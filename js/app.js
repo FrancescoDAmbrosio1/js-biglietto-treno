@@ -13,12 +13,22 @@ const distanza = parseInt(prompt('Quanti chilometri vuole percorrere il passegge
 const eta = parseInt(prompt('Indicare età del passeggero')); //number
 const moltiplicatoreCosto = 0.21; //number
 let costoBiglietto = distanza * moltiplicatoreCosto;
+// if (eta < 18){
+//     costoBiglietto = costoBiglietto - (costoBiglietto * 0.2); //number
+//     console.log('Il costo del biglietto è di:', costoBiglietto.toFixed(2), '€ con applicato uno sconto del 20% per minorenni');
+// } else if (eta > 65){
+//     costoBiglietto = costoBiglietto - (costoBiglietto * 0.4); //number
+//     console.log('Il costo del biglietto è di:', costoBiglietto.toFixed(2), '€ con applicato uno sconto del 40% per gli over 65')
+// } else{
+//     console.log('Il costo del biglietto è di:', costoBiglietto.toFixed(2), '€');
+// }
+
 if (eta < 18){
     costoBiglietto = costoBiglietto - (costoBiglietto * 0.2); //number
-    console.log('Il costo del biglietto è di:', costoBiglietto.toFixed(2), '€ con applicato uno sconto del 20% per minorenni');
+    document.getElementById("costoBiglietto").innerHTML = "Il costo del biglietto è di " + costoBiglietto.toFixed(2) + "€ con applicato uno sconto del 20% per minorenni";
 } else if (eta > 65){
     costoBiglietto = costoBiglietto - (costoBiglietto * 0.4); //number
-    console.log('Il costo del biglietto è di:', costoBiglietto.toFixed(2), '€ con applicato uno sconto del 40% per gli over 65')
+    document.getElementById("costoBiglietto").innerHTML = "Il costo del biglietto è di " + costoBiglietto.toFixed(2) + "€ con applicato uno sconto del 40% per over 65";
 } else{
-    console.log('Il costo del biglietto è di:', costoBiglietto.toFixed(2), '€');
+    document.getElementById("costoBiglietto").innerHTML = "Il costo del biglietto è di " + costoBiglietto.toFixed(2) + "€";
 }
