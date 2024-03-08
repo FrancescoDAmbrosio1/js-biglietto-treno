@@ -26,9 +26,12 @@ let costoBiglietto = distanza * moltiplicatoreCosto;
 if (eta < 18){
     costoBiglietto = costoBiglietto - (costoBiglietto * 0.2); //number
     document.getElementById("costoBiglietto").innerHTML = "Il costo del biglietto è di " + costoBiglietto.toFixed(2) + "€ con applicato uno sconto del 20% per minorenni";
+    document.getElementById("riga").style.visibility = "visible";
 } else if (eta > 65){
     costoBiglietto = costoBiglietto - (costoBiglietto * 0.4); //number
     document.getElementById("costoBiglietto").innerHTML = "Il costo del biglietto è di " + costoBiglietto.toFixed(2) + "€ con applicato uno sconto del 40% per over 65";
+    document.getElementById("riga").style.visibility = "visible";
 } else{
     document.getElementById("costoBiglietto").innerHTML = "Il costo del biglietto è di " + costoBiglietto.toFixed(2) + "€";
+    document.getElementById("riga").style.visibility = "visible";
 }
